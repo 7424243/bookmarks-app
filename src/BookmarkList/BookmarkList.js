@@ -3,6 +3,7 @@ import BookmarkItem from '../BookmarkItem/BookmarkItem';
 import './BookmarkList.css';
 import BookmarksContext from '../BookmarksContext';
 
+
 class BookmarkList extends Component {
   static contextType = BookmarksContext;
 
@@ -10,7 +11,10 @@ class BookmarkList extends Component {
     bookmarks: []
   };
 
+
+
   render() {
+
     const { bookmarks } = this.context
     return (
       <section className='BookmarkList'>

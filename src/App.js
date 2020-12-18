@@ -6,6 +6,7 @@ import Nav from './Nav/Nav';
 import config from './config';
 import './App.css';
 import BookmarksContext from './BookmarksContext';
+import Rating from './Rating/Rating';
 
 
 class App extends Component {
@@ -77,7 +78,7 @@ class App extends Component {
             />
           </div>
         </BookmarksContext.Provider>
-
+        <Rating />
       </main>
     );
   }
