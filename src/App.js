@@ -41,17 +41,20 @@ class App extends Component {
       method: 'GET',
       headers: {
         'content-type': 'application/json',
-        'Authorization': `Bearer ${config.API_KEY}`
+        'Authorization': `Bearer 2bccb616-0666-491b-959a-49557d685548`
       }
     })
       .then(res => {
         if (!res.ok) {
-          throw new Error(res.status)
+          return res.json().then(error => Promise.reject(error))
         }
         return res.json()
       })
       .then(this.setBookmarks)
-      .catch(error => this.setState({ error }))
+      .catch(error => {
+        console.error(error)
+        this.setState({ error })
+      })
   }
 
   render() {
@@ -78,7 +81,7 @@ class App extends Component {
             />
           </div>
         </BookmarksContext.Provider>
-        <Rating />
+        
       </main>
     );
   }
