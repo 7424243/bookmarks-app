@@ -6,7 +6,6 @@ import Nav from './Nav/Nav';
 import config from './config';
 import './App.css';
 import BookmarksContext from './BookmarksContext';
-import Rating from './Rating/Rating';
 
 
 class App extends Component {
@@ -41,7 +40,7 @@ class App extends Component {
       method: 'GET',
       headers: {
         'content-type': 'application/json',
-        'Authorization': `Bearer 2bccb616-0666-491b-959a-49557d685548`
+        'Authorization': `Bearer ${config.API_KEY}`
       }
     })
       .then(res => {
