@@ -16,10 +16,7 @@ function deleteBookmarkRequest(bookmarkId, callback) {
   .then(response => {
     if (!response.ok) {
       //get error message from the response.
-      return response.json().then(error => {
-        //throw the error
-        throw error
-      })
+      return response.json().then(error => Promise.reject(error))
     }
     return response.json();
   })
