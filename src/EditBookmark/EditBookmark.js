@@ -25,7 +25,6 @@ class EditBookmark extends Component {
         fetch (`http://localhost:8000/api/bookmarks/${bookmarkId}`, {
             method: 'GET',
             headers: {
-                'content-type': 'applciation/json',
                 'Authorization': `Bearer ${config.API_KEY}`
             }
         })
@@ -168,7 +167,6 @@ class EditBookmark extends Component {
                         type='number'
                         name='rating'
                         id='rating'
-                        defaultValue='1'
                         min='1'
                         max='5'
                         required
