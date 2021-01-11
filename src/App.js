@@ -6,6 +6,7 @@ import Nav from './Nav/Nav';
 import config from './config';
 import './App.css';
 import BookmarksContext from './BookmarksContext';
+import EditBookmark from './EditBookmark/EditBookmark'
 
 
 class App extends Component {
